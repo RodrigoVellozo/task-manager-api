@@ -12,3 +12,6 @@
 
 # migrations
 ### npm i --save-dev sequelize-cli
+
+# body-parser
+### npm i --save body-parser
