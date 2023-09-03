@@ -10,7 +10,9 @@ const config = {
         define: {
             underscored: true
         }
-    }
+    },
+    jwtSecret: 'chavesecretaparaencodedecodetokenshahahahahahaha',
+    jwtSession: {session: false}
 };
 
 module.exports = config;

@@ -1,3 +1,9 @@
+# Task Management API
+
+<h1 align="center">
+    <a href="https://nodejs.org/en">🔗 Node.js</a>
+</h1>
+
 # API
 ### npm i express --save
 
@@ -15,3 +21,8 @@
 
 # body-parser
 ### npm i --save body-parser
+
+# authentication
+### npm i --save passport-jwt
+### npm i --save jsonwebtoken
+### npm i --save bcrypt
