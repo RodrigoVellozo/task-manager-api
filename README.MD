@@ -26,3 +26,7 @@
 ### npm i --save passport-jwt
 ### npm i --save jsonwebtoken
 ### npm i --save bcrypt
+
+# documenattion from api
+### npm i apidoc --save-dev
+
