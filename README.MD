@@ -27,6 +27,6 @@
 ### npm i --save jsonwebtoken
 ### npm i --save bcrypt
 
-# documenattion from api
+# documentation from api
 ### npm i apidoc --save-dev
 
