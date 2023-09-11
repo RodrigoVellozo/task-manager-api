@@ -12,6 +12,8 @@ module.exports = (app) => {
     })
     .post((req, res) => {
       req.body.user_id = req.user.id;
+      
+      console.log('linha 15: ',req.body);
       Tasks.create(req.body)
         .then((result) => res.json(result))
         .catch((error) => res.status(412).json({ msg: error.message }));

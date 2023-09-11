@@ -1,3 +1,5 @@
+const bcrypt = require('bcrypt');
+
 module.exports = (sequelize, DataTypes) => {
   const Users = sequelize.define("Users", {
     id: {
@@ -20,9 +22,19 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true,
       },
     },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
   });
   Users.addHook("beforeCreate", (user) => {
     const salt = bcrypt.genSaltSync();
+    console.log("salt", salt);
+    console.log("password", user.password);
+    
     user.password = bcrypt.hashSync(user.password, salt);
   });
   Users.associate = (models) => {

@@ -12,7 +12,7 @@ module.exports = (app) => {
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
     },
     (jwt_payload, done) => {
-      Users.findById(jwt_payload.id, "-password")
+      Users.findByPk(jwt_payload.id)
         .then((user) => {
           if (user) {
             return done(null, {

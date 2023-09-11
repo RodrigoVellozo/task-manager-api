@@ -17,7 +17,16 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       defaultValue: false,
     },
-  }); 
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "Users",
+        key: "id",
+        as: "user_id",
+      },
+    },
+  });
   Tasks.associate = (models) => {
     Tasks.belongsTo(models.Users);
   };
